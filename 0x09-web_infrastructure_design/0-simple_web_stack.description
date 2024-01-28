@@ -1,0 +1,31 @@
+Description
+Simple web infrastructure:hosts a website that can be accessed through www.foobar.com. There are no firewalls or SSL certificates for protecting the server's network. Each component (database, application server) has to share the resources (CPU, RAM, and SSD) provided by the server.
+Specifics About This Infrastructure
+What a server is: It is a computer hardware or software that provides services to other computers, which are usually referred to as users or clients.
+
+The role of the domain name: Provides a human-friendly alias for an IP Address. For example, the domain name www.foobar.com is easier to recognize and remember than 8.8.8.8.. The IP address and domain name alias is mapped in the Domain Name System (DNS)
+
+The type of DNS record www is in www.foobar.com.
+    www.foobar.com uses an A record and can be checked by running dig www.foobar.com.
+    Note: the results might be different but for the infrastructure in this design, an A record is used.
+    Address Mapping record (A Record)—also called as a DNS host record stores a hostname and its corresponding IPv4 address.
+The role of the web server.
+    The web server is a software/hardware that accepts requests via HTTP or secure HTTP (HTTPS) and responds with the content of the requested resource or an error messsage.
+The role of the application server.It is used in installing, operating and hosting applications and associated services for end users. IT services and organizations and facilitates the hosting and delivery of high-end consumer or business applications
+
+The role of the database. It maintains a collection of organized information that can easily be accessed, managed and updated
+
+What the server uses to communicate with the client (computer of the user requesting the website).
+    Communication between the client and the server occurs over the internet network through the Transmission Control protocol (TC)P/Internet protocol(IP) suite.
+
+Issues With one server web infrastructure:
+    Some of the issues of simple Web Stack include;
+    There are multiple Single Point Of Failure (SPOF) in this infrastructure.
+    For example, if the MySQL database server is down, the entire site would be down.
+
+    There is an issue with downtime when there is need for maintenance.
+    When we need to run some maintenance checks on any component, they have to be put down or the server has to be turned off. Since there is only one server, the website would be experiencing a downtime.
+
+    Cannot scale if there is too much incoming traffic.
+    It would be hard to scale this infrastructure becauses one server contains the required components. The server can quickly run out of resources or slow down when it starts receiving a lot of requests.
+
